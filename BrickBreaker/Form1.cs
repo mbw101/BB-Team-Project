@@ -7,13 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 using System.IO;
 using System.Media;
 
 namespace BrickBreaker
 {
+    
     public partial class Form1 : Form
     {
+        //TESTING List
+        //items in the "highScore" are "scores" but in string form, 
+        //the items from the "highScore" can be converted back for comparison
+        //XML file will only save the high scores
+        
+        public static List<HighScore> highScores = new List<HighScore>();
         /// <summary>
         /// The Game's Soundplayer.
         /// Note that remember that playSoundFrom and preloadSound will save lines of code when used
@@ -57,26 +65,34 @@ namespace BrickBreaker
             return false;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        public void ChangeScreen(UserControl remove, UserControl add)
+
         {
-            // Start the program centred on the Menu Screen
-            MenuScreen ms = new MenuScreen();
-            this.Controls.Add(ms);
-            //Center the control
-            ms.Location = new Point((this.Width - ms.Width) / 2, (this.Height - ms.Height) / 2);
-            //ms.Size = new Size(this.Width, this.Height);
+            Controls.Add(add);
+            Controls.Remove(remove);
+            remove.Dispose();
+
         }
 
-        public void ChangeScreen(UserControl current, UserControl next)
+        private void Form1_Load(object sender, EventArgs e)
         {
-            //f is set to the form that the current control is on
-            Controls.Remove(current);
+            //Plans for next step...determine if the score should be saved to the list (5 scores should be in high scores)
+            //Set variables to each of the score like highScores[0]...highScores[4]...as these will be displayed 
+            //if the list contains the same score, then do not add it again to the list
+            //if (highScores.Contains(the same score))
+            //{
+            //  Do not display, just proceed
+            //}
+            //if the list does not contain the same score, check if the score is more or less than the scores in highScores
+            //{
+            //  if the score is more, then display
+            //  if the score is less, then do not display
+            //}
+            StartScreen ss = new StartScreen();
+            this.Controls.Add(ss);
 
-            //centres the control on the screen
-            next.Location = new Point((Width - next.Width) / 2, (Height - next.Height) / 2);
+            ss.Location = new Point((this.Width - ss.Width) / 2, (this.Height - ss.Height) / 2);
 
-            Controls.Add(next);
-            next.Focus();
         }
     }
 }

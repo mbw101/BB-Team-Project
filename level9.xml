@@ -1,1 +1,20 @@
-
+<?xml version="1.0" encoding="utf-8"?>
+<level>
+  <brick x="379" y="125" hp="1"/>
+  <brick x="379" y="156" hp="1"/>
+  <brick x="379" y="187" hp="1"/>
+  <brick x="772" y="125" hp="1"/>
+  <brick x="772" y="156" hp="1"/>
+  <brick x="772" y="187" hp="1"/>
+  <brick x="547" y="219" hp="10"/>
+  <brick x="547" y="250" hp="10"/>
+  <brick x="603" y="219" hp="10"/>
+  <brick x="603" y="250" hp="10"/>
+  <brick x="435" y="250" hp="1"/>
+  <brick x="715" y="250" hp="1"/>
+  <brick x="491" y="290" hp="1"/>
+  <brick x="659" y="290" hp="1"/>
+  <brick x="547" y="321" hp="1"/>
+  <brick x="603" y="321" hp="1"/>
+  <brick x="576" y="352" hp="1"/>
+</level>

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace BrickBreaker
 {
+    [Obsolete("Who made this? This is just unnessesary and overly complicated.", true)]
     public partial class PauseScreen : Form
     {
         private static PauseScreen pauseForm;

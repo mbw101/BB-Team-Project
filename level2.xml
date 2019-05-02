@@ -1,1 +1,27 @@
-
+﻿<?xml version="1.0" encoding="utf-8"?>
+<level>
+  <brick x ="435" y ="97" hp = " 1"/>
+  <brick x ="491" y ="97" hp ="1"/>
+  <brick x ="547" y ="97" hp ="1"/>
+  <brick x ="603" y ="97" hp ="1"/>
+  <brick x ="659" y ="97" hp ="1"/>
+  <brick x ="379" y ="159" hp ="1"/>
+  <brick x ="435" y ="159" hp ="1"/>
+  <brick x ="379" y ="190" hp ="1"/>
+  <brick x ="379" y ="221" hp ="1"/>
+  <brick x ="379" y ="252" hp ="1"/>
+  <brick x ="379" y ="283" hp ="1"/>
+  <brick x ="435" y ="283" hp ="1"/>
+  <brick x ="659" y ="159" hp ="1"/>
+  <brick x ="715" y ="159" hp ="1"/>
+  <brick x ="715" y ="190" hp ="1"/>
+  <brick x ="715" y ="221" hp ="1"/>
+  <brick x ="715" y ="252" hp ="1"/>
+  <brick x ="715" y ="283" hp ="1"/>
+  <brick x ="659" y ="283" hp ="1"/>
+  <brick x ="435" y ="345" hp ="1"/>
+  <brick x ="491" y ="345" hp ="1"/>
+  <brick x ="547" y ="345" hp ="1"/>
+  <brick x ="603" y ="345" hp ="1"/>
+  <brick x ="659" y ="345" hp ="1"/>
+</level>

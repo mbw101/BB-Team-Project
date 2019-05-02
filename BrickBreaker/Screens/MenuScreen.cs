@@ -7,24 +7,57 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 using System.IO;
 
 namespace BrickBreaker
 {
     public partial class MenuScreen : UserControl
     {
+        public void scoreOutput()
+        {
+            highScoreLabel.Text = "High Scores\n";
+            //testing: displaying the scores
+            foreach (HighScore s in Form1.highScores)
+            {
+
+                highScoreLabel.Text += s.score + " " + "\n";
+
+                //highScoreLabel.Text = s.score[0] + " " + "\n" + s.score[1] + " " + "\n" + s.score[2]
+                //    + " " + "\n" + s.score[3] + " " + "\n" + s.score[4] + " " + "\n";
+            }
+        }
+        //testing
+        public void loadScoresRK()
+        {
+            //creating Xml reader file 
+            XmlReader reader = XmlReader.Create("Resources/HighScores.xml", null);
+            string newScoreString;
+
+            //basically highScore1String is going to be highScore #1...and on...etc
+            //plan: "highScores" should only contain 5 high "scores"
+
+            while (reader.Read())
+            {
+                if (reader.NodeType == XmlNodeType.Text)
+                {
+                    newScoreString = reader.ReadString();
+
+                    HighScore newScore = new HighScore(newScoreString);
+                    Form1.highScores.Add(newScore);
+
+                }
+            }
+
+            reader.Close();
+        }
         private static int index = 0;
         private List<Button> buttons = new List<Button>();
         public MenuScreen()
         {
-            InitializeComponent();
-            //Foreach button in the screen's controls add it to a list and add code to the button Events when it gains and loses focus
-            foreach (var button in Controls.OfType<Button>())
-            {
-                buttons.Add(button);
-                button.LostFocus += lostFocus;
-                button.GotFocus += gainFocus;
-            }
+
+            InitializeComponent();                   
+
         }
 
         /// <summary>
@@ -63,12 +96,12 @@ namespace BrickBreaker
         private void playButton_Click(object sender, EventArgs e)
         {
             // Goes to the game screen
-            GameScreen gs = new GameScreen();
             var form = FindForm() as Form1;
             form.ChangeScreen(this, new GameScreen());
         }
 
         
+       
         /// <summary>
         /// The event code for when the Menu Screen finishes initializing loads
         /// </summary>
@@ -119,6 +152,7 @@ namespace BrickBreaker
             else if (index >= buttons.Count)
                 index = buttons.Count - 1;
             return buttons[index];
+
         }
     }
 }

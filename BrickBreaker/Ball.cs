@@ -29,6 +29,30 @@ namespace BrickBreaker
             y = y + ySpeed*Yangle;
         }
 
+        //testing method
+        public void GameOverMove()
+        {
+            y = y + ySpeed;
+        }
+
+        public void WinMove()
+        {
+            y = y - ySpeed;
+        }
+
+        //testing explosions
+        public void ExplosionLeft()
+        {
+            x = x - size;
+            y = y - ySpeed;
+        }
+
+        public void ExplosionRight()
+        {
+            x = x + size;
+            y = y - ySpeed;
+        }
+
         public bool BlockCollision(Block b)
         {
             Rectangle blockRec = new Rectangle(Convert.ToInt32(b.x), Convert.ToInt32(b.y), b.width, b.height);
@@ -82,12 +106,25 @@ namespace BrickBreaker
 
         public bool BottomCollision(UserControl UC, Paddle p)
         {
-            if (y + size -4 > p.y)
-            //if(y >= UC.Height)
+            if (y >= UC.Height + 10)
             {
                 return true;
             }
 
+            return false;
+        }
+        //Testing Purposes: Collision Method
+        public bool ScoreTracker(Block bl)
+        {
+            Rectangle ball = new Rectangle(x, y, size, size);
+            Rectangle block = new Rectangle(bl.x, bl.y, bl.width, bl.height);
+
+            if (ball.IntersectsWith(block))
+            {
+                //Adding values to score 
+                return true;
+                
+            }
             return false;
         }
     }

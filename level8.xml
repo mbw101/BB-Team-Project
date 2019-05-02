@@ -1,39 +1,46 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <level>
+
+  <brick x = "908" y = "12" hp = "3"/>
+  <brick x = "852" y = "43" hp = "3"/>
+  <brick x = "796" y = "74" hp = "3"/>
+  <brick x = "740" y = "105" hp = "3"/>
+  <brick x = "684" y = "136" hp = "3"/>
+  <brick x = "634" y = "167" hp = "3"/>
+  <brick x = "572" y = "198" hp = "3"/>
+  <brick x = "516" y = "229" hp = "3"/> 
+  <brick x = "460" y = "260" hp = "3"/>
+
   <brick x = "460" y = "12" hp = "1"/>
   <brick x = "684" y = "12" hp = "2"/>
-  <brick x = "908" y = "12" hp = "3"/>
   <brick x = "1132" y = "12" hp = "2"/>
   <brick x = "404" y = "43" hp = "1"/>
   <brick x = "628" y = "43" hp = "2"/>
-  <brick x = "852" y = "43" hp = "3"/>
   <brick x = "1076" y = "43" hp = "2"/> 
   <brick x = "348" y = "74" hp = "1"/>
   <brick x = "572" y = "74" hp = "2"/>
-  <brick x = "796" y = "74" hp = "3"/>
   <brick x = "1020" y = "74" hp = "2"/>
   <brick x = "292" y = "105" hp = "1"/>
   <brick x = "516" y = "105" hp = "2"/>
-  <brick x = "740" y = "105" hp = "3"/>
   <brick x = "964" y = "105" hp = "2"/>
   <brick x = "236" y = "136" hp = "1"/>
   <brick x = "460" y = "136" hp = "2"/> 
-  <brick x = "684" y = "136" hp = "3"/>
   <brick x = "908" y = "136" hp = "2"/>
   <brick x = "1132" y = "136" hp = "1"/>
+  <brick x = "186" y = "167" hp = "1"/>
+  <brick x = "410" y = "167" hp = "2"/> 
+  <brick x = "858" y = "167" hp = "2"/>
+  <brick x = "1082" y = "167" hp = "1"/>
   <brick x = "124" y = "198" hp = "1"/>
   <brick x = "348" y = "198" hp = "2"/>
-  <brick x = "572" y = "198" hp = "3"/>
   <brick x = "796" y = "198" hp = "2"/>
   <brick x = "1020" y = "198" hp = "1"/>
   <brick x = "68" y = "229" hp = "1"/>
   <brick x = "292" y = "229" hp = "2"/>
-  <brick x = "516" y = "229" hp = "3"/> 
   <brick x = "740" y = "229" hp = "2"/>
   <brick x = "964" y = "229" hp = "1"/> 
   <brick x = "12" y = "260" hp = "1"/>
   <brick x = "236" y = "260" hp = "2"/>
-  <brick x = "460" y = "260" hp = "3"/>
   <brick x = "684" y = "260" hp = "2"/>
   <brick x = "908" y = "260" hp = "1"/>
 </level>
